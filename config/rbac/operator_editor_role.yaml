@@ -1,0 +1,27 @@
+# permissions for end users to edit operators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: math-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: operator-editor-role
+rules:
+- apiGroups:
+  - batch.math.operator.com
+  resources:
+  - operators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - batch.math.operator.com
+  resources:
+  - operators/status
+  verbs:
+  - get

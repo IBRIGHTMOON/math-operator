@@ -1,0 +1,23 @@
+# permissions for end users to view operators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: math-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: operator-viewer-role
+rules:
+- apiGroups:
+  - batch.math.operator.com
+  resources:
+  - operators
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.math.operator.com
+  resources:
+  - operators/status
+  verbs:
+  - get

@@ -1,0 +1,6 @@
+apiVersion: batch.math.operator.com/v1
+kind: Operator
+metadata:
+  name: default
+spec:
+  operation: +

@@ -1,0 +1,7 @@
+apiVersion: batch.math.operator.com/v1
+kind: Operand
+metadata:
+  name: operand2
+spec:
+  value: 4
+  clear: false

@@ -1,0 +1,6 @@
+## Append samples of your project ##
+resources:
+- batch_v1_operand.yaml
+- batch_v1_operator.yaml
+- batch_v1_result.yaml
+# +kubebuilder:scaffold:manifestskustomizesamples
